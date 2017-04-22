@@ -1,0 +1,704 @@
+[08/Feb/2017 15:15:50] "GET /chaeum/users/ HTTP/1.1" 200 6221
+[08/Feb/2017 15:15:52] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+[08/Feb/2017 15:15:52] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[08/Feb/2017 15:15:52] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[08/Feb/2017 15:15:52] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1132
+[08/Feb/2017 15:15:52] "GET /static/rest_framework/js/jquery-1.12.4.min.js HTTP/1.1" 200 97163
+[08/Feb/2017 15:15:52] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 2876
+[08/Feb/2017 15:15:52] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+[08/Feb/2017 15:15:52] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+[08/Feb/2017 15:15:52] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+[08/Feb/2017 15:15:52] "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1262
+[08/Feb/2017 15:15:53] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[08/Feb/2017 15:15:53] "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[08/Feb/2017 15:16:16] "GET /chaeum/ HTTP/1.1" 200 7770
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 08, 2017 - 15:14:58
+Django version 1.10.1, using settings 'secondsite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 08, 2017 - 15:38:14
+Django version 1.10.1, using settings 'secondsite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x7ff87db92578>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/WEB/secondsite/secondsite/urls.py", line 17, in <module>
+    import chaeum.urls
+  File "/WEB/secondsite/chaeum/urls.py", line 20, in <module>
+    router.register(r'testview', views.TestViewSet)
+AttributeError: 'module' object has no attribute 'TestViewSet'
+[08/Feb/2017 15:39:33] "GET /chaeum/ HTTP/1.1" 200 7996
+[08/Feb/2017 15:39:35] "GET /chaeum/testview/ HTTP/1.1" 200 5112
+[08/Feb/2017 15:39:42] "GET /chaeum/users/ HTTP/1.1" 200 6221
+[08/Feb/2017 15:40:42] "GET /chaeum/api-auth/login/?next=/chaeum/users/ HTTP/1.1" 200 2714
+[08/Feb/2017 15:40:48] "POST /chaeum/api-auth/login/ HTTP/1.1" 200 2953
+[08/Feb/2017 15:40:50] "POST /chaeum/api-auth/login/ HTTP/1.1" 302 0
+[08/Feb/2017 15:40:50] "GET /chaeum/users/ HTTP/1.1" 200 12722
+[08/Feb/2017 15:41:30] "POST /chaeum/users/ HTTP/1.1" 201 11771
+[08/Feb/2017 15:41:34] "GET /chaeum/ HTTP/1.1" 200 8225
+[08/Feb/2017 15:41:37] "GET /chaeum/boards/ HTTP/1.1" 200 11530
+[08/Feb/2017 15:41:56] "POST /chaeum/boards/ HTTP/1.1" 201 10811
+[08/Feb/2017 15:42:08] "GET /chaeum/boards/ HTTP/1.1" 200 12135
+[08/Feb/2017 15:42:27] "POST /chaeum/boards/ HTTP/1.1" 201 10799
+[08/Feb/2017 15:42:32] "POST /chaeum/boards/ HTTP/1.1" 201 10799
+[08/Feb/2017 15:42:34] "GET /chaeum/ HTTP/1.1" 200 8225
+Internal Server Error: /chaeum/testview/
+Traceback (most recent call last):
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/mixins.py", line 42, in list
+    page = self.paginate_queryset(queryset)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/generics.py", line 172, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/pagination.py", line 325, in paginate_queryset
+    return list(queryset[self.offset:self.offset + self.limit])
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/query.py", line 256, in __iter__
+    self._fetch_all()
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 112, in execute
+    return self.cursor.execute(query, args)
+  File "/WEB/Env/secondsite/local/lib64/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/WEB/Env/secondsite/local/lib64/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'TESTVIEW.id' in 'field list'")
+[08/Feb/2017 15:42:36] "GET /chaeum/testview/ HTTP/1.1" 500 145196
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 08, 2017 - 15:39:26
+Django version 1.10.1, using settings 'secondsite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Internal Server Error: /chaeum/testview/
+Traceback (most recent call last):
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/mixins.py", line 42, in list
+    page = self.paginate_queryset(queryset)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/generics.py", line 172, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/pagination.py", line 325, in paginate_queryset
+    return list(queryset[self.offset:self.offset + self.limit])
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/query.py", line 256, in __iter__
+    self._fetch_all()
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/query.py", line 1087, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/query.py", line 54, in __iter__
+    results = compiler.execute_sql()
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 835, in execute_sql
+    cursor.execute(sql, params)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 112, in execute
+    return self.cursor.execute(query, args)
+  File "/WEB/Env/secondsite/local/lib64/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/WEB/Env/secondsite/local/lib64/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1054, "Unknown column 'TESTVIEW.board_id_id' in 'field list'")
+[08/Feb/2017 15:45:32] "GET /chaeum/testview/ HTTP/1.1" 500 145266
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 08, 2017 - 15:45:28
+Django version 1.10.1, using settings 'secondsite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[08/Feb/2017 15:45:59] "GET /chaeum/testview/ HTTP/1.1" 200 9298
+Internal Server Error: /chaeum/testview/
+Traceback (most recent call last):
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/viewsets.py", line 83, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/views.py", line 477, in dispatch
+    response = self.handle_exception(exc)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/views.py", line 437, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/views.py", line 474, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/serializers.py", line 902, in create
+    instance = ModelClass.objects.create(**validated_data)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/query.py", line 399, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/base.py", line 796, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/base.py", line 824, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/base.py", line 908, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/base.py", line 947, in _do_insert
+    using=using, raw=raw)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/query.py", line 1045, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1054, in execute_sql
+    cursor.execute(sql, params)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 112, in execute
+    return self.cursor.execute(query, args)
+  File "/WEB/Env/secondsite/local/lib64/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/WEB/Env/secondsite/local/lib64/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1393, "Can not modify more than one base table through a join view 'secondsite.TESTVIEW'")
+[08/Feb/2017 16:23:11] "POST /chaeum/testview/ HTTP/1.1" 500 182356
+[08/Feb/2017 16:23:40] "GET /chaeum/testview/ HTTP/1.1" 200 9298
+[08/Feb/2017 17:28:30] "GET /chaeum/testview/ HTTP/1.1" 200 9696
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 08, 2017 - 15:45:56
+Django version 1.10.1, using settings 'secondsite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x7f3121702668>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/management/commands/runserver.py", line 121, in inner_run
+    self.check(display_num_errors=True)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/management/base.py", line 374, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/management/base.py", line 361, in _run_checks
+    return checks.run_checks(**kwargs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/checks/registry.py", line 81, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 14, in check_url_config
+    return check_resolver(resolver)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/checks/urls.py", line 24, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/WEB/secondsite/secondsite/urls.py", line 17, in <module>
+    import chaeum.urls
+  File "/WEB/secondsite/chaeum/urls.py", line 3, in <module>
+    from chaeum import views
+  File "/WEB/secondsite/chaeum/views.py", line 203, in <module>
+    class TestViewSet(viewsets.ModelViewSet):
+  File "/WEB/secondsite/chaeum/views.py", line 204, in TestViewSet
+    queryset = Test.objects.all(user_id="2")
+TypeError: all() got an unexpected keyword argument 'user_id'
+[08/Feb/2017 17:31:18] "GET /chaeum/testview/ HTTP/1.1" 200 9498
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 08, 2017 - 17:31:14
+Django version 1.10.1, using settings 'secondsite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[08/Feb/2017 17:31:37] "GET /chaeum/testview/ HTTP/1.1" 200 9298
+Not Found: /
+[08/Feb/2017 17:49:11] "GET / HTTP/1.1" 404 1907
+Not Found: /recordings/index.php
+[09/Feb/2017 00:57:21] "GET /recordings/index.php HTTP/1.1" 404 1967
+Not Found: /
+[09/Feb/2017 02:28:32] "GET / HTTP/1.1" 404 1907
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/SocketServer.py", line 599, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python2.7/SocketServer.py", line 655, in __init__
+    self.handle()
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 159, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python2.7/socket.py", line 480, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+Not Found: /robots.txt
+[09/Feb/2017 05:14:42] "HEAD /robots.txt HTTP/1.0" 404 1972
+Not Found: /
+[09/Feb/2017 05:32:08] "HEAD / HTTP/1.1" 404 1908
+Not Found: /
+[09/Feb/2017 06:06:47] "GET / HTTP/1.0" 404 1907
+Not Found: /
+[09/Feb/2017 06:18:14] "HEAD / HTTP/1.1" 404 1908
+Not Found: /
+[09/Feb/2017 06:18:15] "GET / HTTP/1.1" 404 1907
+Not Found: /
+[09/Feb/2017 07:03:17] "GET / HTTP/1.0" 404 1941
+Not Found: /recordings/index.php
+[09/Feb/2017 08:50:41] "GET /recordings/index.php HTTP/1.1" 404 1967
+Not Found: /phpmyadmin
+[09/Feb/2017 10:28:34] "GET /phpmyadmin HTTP/1.1" 404 1937
+Not Found: /
+[09/Feb/2017 13:14:10] "GET / HTTP/1.0" 404 1941
+Not Found: /
+[09/Feb/2017 14:54:12] "GET / HTTP/1.0" 404 1907
+Not Found: /robots.txt
+[09/Feb/2017 19:26:49] "HEAD /robots.txt HTTP/1.0" 404 1972
+Not Found: /http:/httpheader.net/
+[10/Feb/2017 05:14:28] "GET http://httpheader.net/ HTTP/1.1" 404 1664
+[10/Feb/2017 05:14:49] code 400, message Bad request syntax ('\x04\x01\x00P\xc0c\xf660\x00')
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/logging/__init__.py", line 859, in emit
+    msg = self.format(record)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 732, in format
+    return fmt.format(record)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/utils/log.py", line 191, in format
+    return super(ServerFormatter, self).format(record)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 474, in format
+    s = self._fmt % record.__dict__
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc0 in position 5: ordinal not in range(128)
+Logged from file basehttp.py, line 131
+[10/Feb/2017 05:15:09] code 400, message Bad request syntax ('\x05\x01\x00')
+[10/Feb/2017 05:15:09] " " 400 -
+Not Found: /
+[10/Feb/2017 07:07:27] "GET / HTTP/1.0" 404 1907
+Not Found: /
+[10/Feb/2017 15:04:15] "GET / HTTP/1.0" 404 1907
+Not Found: /w00tw00t.at.ISC.SANS.DFind:)
+[10/Feb/2017 21:09:30] "GET /w00tw00t.at.ISC.SANS.DFind:) HTTP/1.1" 404 2025
+Not Found: /
+[11/Feb/2017 07:39:10] "GET / HTTP/1.0" 404 1907
+Not Found: /
+[11/Feb/2017 08:14:01] "GET / HTTP/1.0" 404 1941
+Not Found: /cgi/common.cgi
+[11/Feb/2017 09:34:03] "GET /cgi/common.cgi HTTP/1.0" 404 1949
+Not Found: /stssys.htm
+[11/Feb/2017 09:34:03] "GET /stssys.htm HTTP/1.0" 404 1937
+Not Found: /
+[11/Feb/2017 09:34:04] "GET / HTTP/1.0" 404 1907
+Not Found: /command.php
+[11/Feb/2017 09:34:05] "POST /command.php HTTP/1.0" 404 1941
+Not Found: /
+[11/Feb/2017 15:54:16] "GET / HTTP/1.0" 404 1907
+Not Found: /recordings/
+[11/Feb/2017 20:39:02] "GET /recordings/ HTTP/1.1" 404 1940
+Not Found: /http:/httpheader.net/
+[11/Feb/2017 23:34:41] "GET http://httpheader.net/ HTTP/1.1" 404 1664
+[11/Feb/2017 23:35:03] code 400, message Bad request syntax ('\x04\x01\x00P\xc0c\xf660\x00')
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/logging/__init__.py", line 859, in emit
+    msg = self.format(record)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 732, in format
+    return fmt.format(record)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/utils/log.py", line 191, in format
+    return super(ServerFormatter, self).format(record)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 474, in format
+    s = self._fmt % record.__dict__
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc0 in position 5: ordinal not in range(128)
+Logged from file basehttp.py, line 131
+[11/Feb/2017 23:35:25] code 400, message Bad request syntax ('\x05\x01\x00')
+[11/Feb/2017 23:35:25] " " 400 -
+Not Found: /
+[12/Feb/2017 00:00:20] "GET / HTTP/1.0" 404 1907
+Not Found: /
+[12/Feb/2017 01:40:00] "GET / HTTP/1.1" 404 1907
+Not Found: /
+[12/Feb/2017 02:25:18] "HEAD / HTTP/1.1" 404 1908
+Not Found: /
+[12/Feb/2017 05:05:32] "GET / HTTP/1.1" 404 1907
+Not Found: /
+[12/Feb/2017 08:24:54] "GET / HTTP/1.0" 404 1907
+Not Found: /
+[12/Feb/2017 10:51:03] "GET / HTTP/1.1" 404 1907
+Not Found: /
+[12/Feb/2017 16:33:34] "GET / HTTP/1.0" 404 1907
+[13/Feb/2017 12:00:38] "GET /chaeum/ HTTP/1.1" 200 8225
+[13/Feb/2017 12:00:38] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+[13/Feb/2017 12:00:38] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+[13/Feb/2017 12:00:38] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+[13/Feb/2017 12:00:38] "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+[13/Feb/2017 12:00:38] "GET /static/rest_framework/js/jquery-1.12.4.min.js HTTP/1.1" 304 0
+[13/Feb/2017 12:00:38] "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+[13/Feb/2017 12:00:38] "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+[13/Feb/2017 12:00:38] "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+[13/Feb/2017 12:00:38] "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+[13/Feb/2017 12:00:38] "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+[13/Feb/2017 12:00:44] "GET /chaeum/users/ HTTP/1.1" 200 14948
+[13/Feb/2017 12:00:44] "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+[13/Feb/2017 12:00:58] "GET /chaeum/boards/3/ HTTP/1.1" 200 12336
+[13/Feb/2017 12:01:50] "GET /chaeum/users/1/ HTTP/1.1" 200 13008
+[13/Feb/2017 12:01:53] "GET /chaeum/boards/3/ HTTP/1.1" 200 12336
+[13/Feb/2017 12:03:18] "GET /chaeum/users/ HTTP/1.1" 200 14948
+[13/Feb/2017 12:04:23] "GET /chaeum/api-auth/logout/?next=/chaeum/users/ HTTP/1.1" 302 0
+[13/Feb/2017 12:04:23] "GET /chaeum/users/ HTTP/1.1" 403 4767
+[13/Feb/2017 12:04:26] "GET /chaeum/users/ HTTP/1.1" 403 4767
+[13/Feb/2017 12:04:27] "GET /chaeum/ HTTP/1.1" 403 4630
+[13/Feb/2017 12:04:40] "GET /chaeum/users/ HTTP/1.1" 403 58
+[13/Feb/2017 12:04:51] "GET /chaeum/users/3/ HTTP/1.1" 403 58
+[13/Feb/2017 12:07:45] "GET /chaeum/users/3/ HTTP/1.1" 403 58
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 13, 2017 - 12:00:33
+Django version 1.10.1, using settings 'secondsite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[13/Feb/2017 12:10:05] "GET /chaeum/users/3/ HTTP/1.1" 200 245
+[13/Feb/2017 12:10:14] "GET /chaeum/users/3/ HTTP/1.1" 200 245
+[13/Feb/2017 12:10:23] "GET /chaeum/users/2/ HTTP/1.1" 200 408
+[13/Feb/2017 12:10:38] "GET /chaeum/users/ HTTP/1.1" 200 939
+[13/Feb/2017 12:10:47] "GET /chaeum/users/ HTTP/1.1" 401 58
+[13/Feb/2017 12:26:57] "GET /chaeum/boards/ HTTP/1.1" 200 696
+[13/Feb/2017 12:27:05] "GET /chaeum/boards/ HTTP/1.1" 401 58
+[13/Feb/2017 12:27:10] "GET /chaeum/boards/1/ HTTP/1.1" 401 58
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 13, 2017 - 12:09:59
+Django version 1.10.1, using settings 'secondsite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 13, 2017 - 12:29:02
+Django version 1.10.1, using settings 'secondsite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[13/Feb/2017 12:30:03] "GET /chaeum/ HTTP/1.1" 401 4733
+[13/Feb/2017 12:30:09] "GET /chaeum/ HTTP/1.1" 401 4733
+[13/Feb/2017 12:30:11] "GET /chaeum/ HTTP/1.1" 401 4733
+[13/Feb/2017 12:30:20] "GET /chaeum/boards/1/ HTTP/1.1" 401 58
+[13/Feb/2017 12:31:01] "GET /chaeum/api-auth/login/?next=/chaeum/ HTTP/1.1" 200 2708
+[13/Feb/2017 12:31:05] "POST /chaeum/api-auth/login/ HTTP/1.1" 302 0
+[13/Feb/2017 12:31:05] "GET /chaeum/ HTTP/1.1" 401 4733
+[13/Feb/2017 12:31:08] "GET /chaeum/ HTTP/1.1" 401 4733
+[13/Feb/2017 12:31:13] "GET /chaeum/api-auth/login/?next=/chaeum/ HTTP/1.1" 200 2708
+[13/Feb/2017 12:31:17] "POST /chaeum/api-auth/login/ HTTP/1.1" 302 0
+[13/Feb/2017 12:31:17] "GET /chaeum/ HTTP/1.1" 401 4733
+[13/Feb/2017 12:31:51] "GET /chaeum/api-auth/login/?next=/chaeum/ HTTP/1.1" 200 2708
+[13/Feb/2017 12:31:55] "POST /chaeum/api-auth/login/ HTTP/1.1" 302 0
+[13/Feb/2017 12:31:55] "GET /chaeum/ HTTP/1.1" 401 4733
+Internal Server Error: /chaeum/boards/
+Traceback (most recent call last):
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/renderers.py", line 103, in render
+    separators=separators
+  File "/usr/lib64/python2.7/json/__init__.py", line 250, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/usr/lib64/python2.7/json/encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib64/python2.7/json/encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/utils/encoders.py", line 70, in default
+    return super(JSONEncoder, self).default(obj)
+  File "/usr/lib64/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <User: gyjung2> is not JSON serializable
+[13/Feb/2017 12:33:19] "GET /chaeum/boards/ HTTP/1.1" 500 102068
+Internal Server Error: /chaeum/boards/1/
+Traceback (most recent call last):
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/renderers.py", line 103, in render
+    separators=separators
+  File "/usr/lib64/python2.7/json/__init__.py", line 250, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/usr/lib64/python2.7/json/encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib64/python2.7/json/encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/utils/encoders.py", line 70, in default
+    return super(JSONEncoder, self).default(obj)
+  File "/usr/lib64/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <User: gyjung2> is not JSON serializable
+[13/Feb/2017 12:33:45] "GET /chaeum/boards/1/ HTTP/1.1" 500 96043
+[13/Feb/2017 12:33:56] "GET /chaeum/users/1/ HTTP/1.1" 200 232
+[13/Feb/2017 12:34:30] "GET /chaeum/users/1/ HTTP/1.1" 200 232
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 13, 2017 - 12:29:06
+Django version 1.10.1, using settings 'secondsite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[13/Feb/2017 12:39:06] "GET /chaeum/api-auth/login/?next=/chaeum/ HTTP/1.1" 200 2708
+[13/Feb/2017 12:39:11] "POST /chaeum/api-auth/login/ HTTP/1.1" 302 0
+[13/Feb/2017 12:39:11] "GET /chaeum/ HTTP/1.1" 401 4733
+[13/Feb/2017 12:39:15] "GET /chaeum/api-auth/login/?next=/chaeum/ HTTP/1.1" 200 2708
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 13, 2017 - 12:38:53
+Django version 1.10.1, using settings 'secondsite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[13/Feb/2017 12:40:44] "POST /chaeum/api-auth/login/ HTTP/1.1" 302 0
+[13/Feb/2017 12:40:44] "GET /chaeum/ HTTP/1.1" 200 7996
+[13/Feb/2017 12:40:47] "GET /chaeum/users/ HTTP/1.1" 200 15162
+[13/Feb/2017 12:40:55] "GET /chaeum/users/1/ HTTP/1.1" 200 232
+[13/Feb/2017 12:41:01] "GET /chaeum/users/1/ HTTP/1.1" 200 232
+Internal Server Error: /chaeum/boards/1/
+Traceback (most recent call last):
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/renderers.py", line 103, in render
+    separators=separators
+  File "/usr/lib64/python2.7/json/__init__.py", line 250, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/usr/lib64/python2.7/json/encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib64/python2.7/json/encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/utils/encoders.py", line 70, in default
+    return super(JSONEncoder, self).default(obj)
+  File "/usr/lib64/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <User: gyjung2> is not JSON serializable
+[13/Feb/2017 12:41:12] "GET /chaeum/boards/1/ HTTP/1.1" 500 95781
+Internal Server Error: /chaeum/boards/
+Traceback (most recent call last):
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/renderers.py", line 701, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/renderers.py", line 659, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/renderers.py", line 409, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/renderers.py", line 103, in render
+    separators=separators
+  File "/usr/lib64/python2.7/json/__init__.py", line 250, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/usr/lib64/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/usr/lib64/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/usr/lib64/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/usr/lib64/python2.7/json/encoder.py", line 332, in _iterencode_list
+    for chunk in chunks:
+  File "/usr/lib64/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/usr/lib64/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/utils/encoders.py", line 70, in default
+    return super(JSONEncoder, self).default(obj)
+  File "/usr/lib64/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <User: gyjung2> is not JSON serializable
+[13/Feb/2017 12:41:46] "GET /chaeum/boards/ HTTP/1.1" 500 179345
+[13/Feb/2017 12:42:44] "GET /chaeum/tips/ HTTP/1.1" 200 11254
+Internal Server Error: /chaeum/boards/
+Traceback (most recent call last):
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 217, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 215, in _get_response
+    response = response.render()
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/template/response.py", line 109, in render
+    self.content = self.rendered_content
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/renderers.py", line 701, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/renderers.py", line 659, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/renderers.py", line 409, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/renderers.py", line 103, in render
+    separators=separators
+  File "/usr/lib64/python2.7/json/__init__.py", line 250, in dumps
+    sort_keys=sort_keys, **kw).encode(obj)
+  File "/usr/lib64/python2.7/json/encoder.py", line 209, in encode
+    chunks = list(chunks)
+  File "/usr/lib64/python2.7/json/encoder.py", line 434, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "/usr/lib64/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/usr/lib64/python2.7/json/encoder.py", line 332, in _iterencode_list
+    for chunk in chunks:
+  File "/usr/lib64/python2.7/json/encoder.py", line 408, in _iterencode_dict
+    for chunk in chunks:
+  File "/usr/lib64/python2.7/json/encoder.py", line 442, in _iterencode
+    o = _default(o)
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/rest_framework/utils/encoders.py", line 70, in default
+    return super(JSONEncoder, self).default(obj)
+  File "/usr/lib64/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <User: gyjung2> is not JSON serializable
+[13/Feb/2017 13:13:16] "GET /chaeum/boards/ HTTP/1.1" 500 179345
+Not Found: /
+[13/Feb/2017 13:39:41] "GET / HTTP/1.0" 404 1907
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 13, 2017 - 12:40:39
+Django version 1.10.1, using settings 'secondsite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 13, 2017 - 14:11:16
+Django version 1.10.1, using settings 'secondsite.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+[13/Feb/2017 14:11:48] "GET /chaeum/boards/ HTTP/1.1" 200 13246
+[13/Feb/2017 14:12:00] "GET /chaeum/boards/1/ HTTP/1.1" 200 219
+[13/Feb/2017 14:16:16] "GET /chaeum/boards/1/ HTTP/1.1" 200 219
+[13/Feb/2017 14:16:59] "PATCH /chaeum/boards/1/ HTTP/1.1" 200 219
+[13/Feb/2017 14:17:28] "POST /chaeum/boards/1/ HTTP/1.1" 405 41
+[13/Feb/2017 14:17:45] "DELETE /chaeum/boards/1/ HTTP/1.1" 204 0
+[13/Feb/2017 14:17:52] "GET /chaeum/boards/ HTTP/1.1" 200 12644
+[13/Feb/2017 14:19:38] "GET /chaeum/boards/2/ HTTP/1.1" 200 12183
+[13/Feb/2017 14:19:44] "GET /chaeum/boards/2/ HTTP/1.1" 200 12183
+[13/Feb/2017 14:19:49] "PUT /chaeum/boards/2/ HTTP/1.1" 200 12183
+[13/Feb/2017 14:19:55] "GET /chaeum/boards/ HTTP/1.1" 200 12644
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/SocketServer.py", line 599, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib64/python2.7/SocketServer.py", line 334, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib64/python2.7/SocketServer.py", line 655, in __init__
+    self.handle()
+  File "/WEB/Env/secondsite/local/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 159, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib64/python2.7/socket.py", line 480, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+Not Found: /robots.txt
+[13/Feb/2017 16:43:30] "HEAD /robots.txt HTTP/1.0" 404 1972
+Not Found: /w00tw00t.at.ISC.SANS.DFind:)
+[13/Feb/2017 20:09:09] "GET /w00tw00t.at.ISC.SANS.DFind:) HTTP/1.1" 404 2025

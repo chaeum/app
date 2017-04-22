@@ -1,0 +1,230 @@
+from __future__ import unicode_literals
+
+from django.db import models
+
+# Create your models here.
+
+class User(models.Model):
+    DEVICE = (
+        ('A', 'Android'),
+        ('I', 'IOS'),
+    )
+    GENDER = (
+        ('M', 'Man'),
+        ('W', 'Woman'),
+    )
+    usr_id = models.CharField(max_length=50, primary_key=True)
+    usr_nm = models.CharField(max_length=50)
+    push_tkn = models.CharField(max_length=200)
+    get_push = models.CharField(max_length=1)
+    device = models.CharField(max_length=1, choices=DEVICE)
+    gender = models.CharField(max_length=1, choices=GENDER)
+    region = models.CharField(max_length=10)
+    reg_date = models.DateField()   
+    mod_date = models.DateField()
+
+
+class Tip(models.Model):
+    tip_id = models.AutoField(primary_key=True)
+    writer_id = models.ForeignKey(User)
+    title = models.CharField(max_length=200)
+    contents = models.CharField(max_length=4000)
+    picture_url = models.CharField(max_length=200)
+    inquire_cnt = models.IntegerField()
+    like_cnt = models.IntegerField()
+    clip_cnt = models.IntegerField()
+
+class Board(models.Model):
+    board_id = models.AutoField(primary_key=True)
+    writer_id = models.ForeignKey(User)
+    title = models.CharField(max_length=200)
+    contents = models.CharField(max_length=4000)
+    picture_url = models.CharField(max_length=200)
+    inquire_cnt = models.IntegerField()
+    like_cnt = models.IntegerField()
+    clip_cnt = models.IntegerField()
+
+class Brand(models.Model):
+    brand_id = models.AutoField(primary_key=True)
+    brand_name = models.CharField(max_length=200)
+    bookmark_cnt = models.IntegerField()
+
+class Component(models.Model):
+    component_id = models.AutoField(primary_key=True)
+    component_name = models.CharField(max_length=200)
+
+class HairProduct(models.Model):
+    product_id = models.AutoField(primary_key=True)
+    brand_id = models.ForeignKey(Brand)
+    component_id = models.ForeignKey(Component)
+    writer_id = models.ForeignKey(User)
+    title = models.CharField(max_length=200)
+    capacity = models.IntegerField()
+    picture_url = models.CharField(max_length=200)
+    inquire_cnt = models.IntegerField()
+    like_cnt = models.IntegerField()
+    clip_cnt = models.IntegerField()
+
+class HairCategory(models.Model):
+    category_id = models.AutoField(primary_key=True)
+    category_name = models.CharField(max_length=200)
+
+class HairShop(models.Model):
+    hairshop_id = models.AutoField(primary_key=True)
+    category_id = models.ForeignKey(HairCategory)
+    hairshop_name = models.CharField(max_length=200)
+    region = models.CharField(max_length=200)
+    address =  models.CharField(max_length=1000)
+    picture_url = models.CharField(max_length=200)
+    inquire_cnt = models.IntegerField()
+    like_cnt = models.IntegerField()
+    clip_cnt = models.IntegerField()
+
+class Surgery(models.Model):
+    surgery_id = models.AutoField(primary_key=True)
+    surgery_name = models.CharField(max_length=200)
+    contents = models.CharField(max_length=4000)
+    picture_url = models.CharField(max_length=200)
+    inquire_cnt = models.IntegerField()
+    like_cnt = models.IntegerField()
+    clip_cnt = models.IntegerField()
+
+class ClinicCategory(models.Model):
+    categoryid = models.AutoField(primary_key=True)
+    category_name = models.CharField(max_length=200)
+
+class Clinic(models.Model):
+    clinic_id = models.AutoField(primary_key=True)
+    clinic_name = models.CharField(max_length=200)
+    region = models.CharField(max_length=200)
+    address = models.CharField(max_length=1000)
+    picture_url = models.CharField(max_length=200)
+    inquire_cnt = models.IntegerField()
+    like_cnt = models.IntegerField()
+    clip_cnt = models.IntegerField()
+
+class MedicineProduceCompany(models.Model):
+    medicine_produce_id = models.AutoField(primary_key=True)
+    medicine_produce_name = models.CharField(max_length=200)
+
+class MedicineSaleCompany(models.Model):
+    medicine_sale_id = models.AutoField(primary_key=True)
+    medicine_sale_name = models.CharField(max_length=200)
+
+class SpecialMedicine(models.Model):
+    special_medicine_id = models.AutoField(primary_key=True)
+    special_medicine_name = models.CharField(max_length=200)
+    medicine_produce_id = models.ForeignKey(MedicineProduceCompany)
+    medicine_sale_id = models.ForeignKey(MedicineSaleCompany)
+    brand_id = models.ForeignKey(Brand)
+    component_id = models.ForeignKey(Component)
+    effect = models.CharField(max_length=200)
+    usage_capacity = models.CharField(max_length=200)
+    forbid = models.CharField(max_length=200)
+    sideeffect = models.CharField(max_length=200)
+    insurance_yn = models.CharField(max_length=1)
+    careful_yn = models.CharField(max_length=1)
+
+class NormalMedicine(models.Model):
+    normal_medicine_id = models.AutoField(primary_key=True)
+    normal_medicine_name = models.CharField(max_length=200)
+    medicine_produce_id = models.ForeignKey(MedicineProduceCompany)
+    medicine_sale_id = models.ForeignKey(MedicineSaleCompany)
+    brand_id = models.ForeignKey(Brand)
+    component_id = models.ForeignKey(Component)
+    effect = models.CharField(max_length=200)
+    usage_capacity = models.CharField(max_length=200)
+    forbid = models.CharField(max_length=200)
+    sideeffect = models.CharField(max_length=200)
+    insurance_yn = models.CharField(max_length=1)
+    careful_yn = models.CharField(max_length=1)
+
+class SurgeryReview(models.Model):
+    sergery_review_id = models.AutoField(primary_key=True)
+    user_id = models.ForeignKey(User)
+    surgery_id = models.ForeignKey(Surgery)
+    score = models.IntegerField()
+    good_thing = models.CharField(max_length=500)
+    bad_thing = models.CharField(max_length=500)
+    ggultip = models.CharField(max_length=500)
+    picture_url = models.CharField(max_length=200)
+    inquire_cnt = models.IntegerField()
+    like_cnt = models.IntegerField()
+    clip_cnt = models.IntegerField()
+    regdate = models.DateField()
+
+class ClinicReview(models.Model):
+    clinic_review_id = models.AutoField(primary_key=True)
+    user_id = models.ForeignKey(User)
+    clinic_id = models.ForeignKey(Clinic)
+    score = models.IntegerField()
+    good_thing = models.CharField(max_length=500)
+    bad_thing = models.CharField(max_length=500)
+    ggultip = models.CharField(max_length=500)
+    picture_url = models.CharField(max_length=200)
+    inquire_cnt = models.IntegerField()
+    like_cnt = models.IntegerField()
+    clip_cnt = models.IntegerField()
+    regdate = models.DateField()
+
+class HairCategoryReview(models.Model):
+    hair_review_id = models.AutoField(primary_key=True)
+    user_id = models.ForeignKey(User)
+    hair_category_id = models.ForeignKey(HairCategory)
+    score = models.IntegerField()
+    good_thing = models.CharField(max_length=500)
+    bad_thing = models.CharField(max_length=500)
+    ggultip = models.CharField(max_length=500)
+    picture_url = models.CharField(max_length=200)
+    inquire_cnt = models.IntegerField()
+    like_cnt = models.IntegerField()
+    clip_cnt = models.IntegerField()
+    regdate = models.DateField()
+
+class HairShopReview(models.Model):
+    hair_shop_review_id = models.AutoField(primary_key=True)
+    user_id = models.ForeignKey(User)
+    hair_shop_id = models.ForeignKey(HairShop)
+    score = models.IntegerField()
+    good_thing = models.CharField(max_length=500)
+    bad_thing = models.CharField(max_length=500)
+    ggultip = models.CharField(max_length=500)
+    picture_url = models.CharField(max_length=200)
+    inquire_cnt = models.IntegerField()
+    like_cnt = models.IntegerField()
+    clip_cnt = models.IntegerField()
+    regdate = models.DateField()
+
+class SpecialMedicineReview(models.Model):
+    special_medicine_review_id = models.AutoField(primary_key=True)
+    user_id = models.ForeignKey(User)
+    special_medicine_id = models.ForeignKey(SpecialMedicine)
+    score = models.IntegerField()
+    good_thing = models.CharField(max_length=500)
+    bad_thing = models.CharField(max_length=500)
+    ggultip = models.CharField(max_length=500)
+    picture_url = models.CharField(max_length=200)
+    inquire_cnt = models.IntegerField()
+    like_cnt = models.IntegerField()
+    clip_cnt = models.IntegerField()
+    regdate = models.DateField()
+
+class NormalMedicineReview(models.Model):
+    normal_medicine_review_id = models.AutoField(primary_key=True)
+    user_id = models.ForeignKey(User)
+    normal_medicine_id = models.ForeignKey(NormalMedicine)
+    score = models.IntegerField()
+    good_thing = models.CharField(max_length=500)
+    bad_thing = models.CharField(max_length=500)
+    ggultip = models.CharField(max_length=500)
+    picture_url = models.CharField(max_length=200)
+    inquire_cnt = models.IntegerField()
+    like_cnt = models.IntegerField()
+    clip_cnt = models.IntegerField()
+    regdate = models.DateTimeField()
+
+class Commect(models.Model):
+    comment_id = models.AutoField(primary_key=True)
+    user_id = models.ForeignKey(User)
+    comment_category = models.CharField(max_length=2)
+    regdate = models.DateTimeField()
