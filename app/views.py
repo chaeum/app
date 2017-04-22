@@ -5,10 +5,10 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.generics import get_object_or_404
 from rest_framework.response import Response
 from django.contrib.auth.models import User
-from chaeum.models import Profile, Magazine, Brnd, Comp, CompList, \
+from app.models import Profile, Magazine, Brnd, Comp, CompList, \
     HairPrd, Medicine, HairShop, HairPrg, HairPrgSet, \
     Clinic, ClinicPrg, Review, Image
-from chaeum.serializers import ProfileSerializer, UserSerializer, MagazineSerializer, BrndSerializer, \
+from app.serializers import ProfileSerializer, UserSerializer, MagazineSerializer, BrndSerializer, \
     CompSerializer, CompListSerializer, HairPrdSerializer, MedicineSerializer, \
     HairShopSerializer, HairPrgSerializer, HairPrgSetSerializer, ClinicSerializer, ClinicPrgSerializer, ReviewSerializer, \
     NormMedSerializer, EtcMedSerializer, SpecMedSerializer

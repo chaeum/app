@@ -1,28 +1,33 @@
-from django.conf.urls import url, include
-from django.shortcuts import render_to_response
-from chaeum import views
-from rest_framework import routers
-#from rest_framework.authtoken import views as auth_token_views
-from rest_framework_expiring_authtoken import views as expiring_auth_token_views
+"""firstsite URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/1.10/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  url(r'^$', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.conf.urls import url, include
+    2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
+"""
+from django.conf.urls import include, url
+import app.urls
+
+from app import views
+
 from django.conf.urls.static import static
 from django.conf import settings
 
-router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'magazines', views.MagazineViewSet)
-router.register(r'brnds', views.BrndViewSet)
-router.register(r'hairprds', views.HairPrdViewSet)
-router.register(r'normmeds', views.NormMedViewSet)
-router.register(r'etcmeds', views.EtcMedViewSet)
-router.register(r'specmeds', views.SpecMedViewSet)
-router.register(r'hairshops', views.HairShopViewSet)
-router.register(r'clinics', views.ClinicViewSet)
-router.register(r'reviews', views.ReviewViewSet)
-#router.register(r'images', views.ImageViewSet)
-
 urlpatterns = [
-    url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    #url(r'^api-token-auth/', auth_token_views.obtain_auth_token)
-    url(r'^api-token-auth/', expiring_auth_token_views.obtain_expiring_auth_token)
-]
+    url(r'^app/', include('app.urls')),
+]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# urlpatterns = [
+#     url(r'^api', include(common_router.urls)),
+#     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+#     url(r'^testapp/', include('testapp.urls')),
+#     url(r'^app/', include('app.urls')),
+# ]

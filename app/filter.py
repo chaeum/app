@@ -1,7 +1,7 @@
 import django_filters
 # from models import User, Tip, Board, Brnd, Comp, HairPrd, \
 from django.contrib.auth.models import User
-from chaeum.models import Magazine, Brnd, Comp, HairPrd, \
+from app.models import Magazine, Brnd, Comp, HairPrd, \
     Clinic
 
 # class UserFilter(django_filters.rest_framework.FilterSet):

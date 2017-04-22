@@ -76,7 +76,7 @@ class Migration(migrations.Migration):
                 ('img_url', models.CharField(max_length=200)),
                 ('reg_date', models.DateTimeField()),
                 ('mod_date', models.DateTimeField(auto_now_add=True)),
-                ('clinic', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='clinicrv_clinic', to='chaeum.Clinic')),
+                ('clinic', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='clinicrv_clinic', to='app.Clinic')),
                 ('usr', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='clinicrv_usr', to=settings.AUTH_USER_MODEL)),
             ],
             options={
@@ -87,7 +87,7 @@ class Migration(migrations.Migration):
             name='ClinicSurgery',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('clinic', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='chaeum.Clinic')),
+                ('clinic', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='app.Clinic')),
             ],
             options={
                 'db_table': 'TBCLINICSURGERY',
@@ -114,8 +114,8 @@ class Migration(migrations.Migration):
                 ('clip_cnt', models.IntegerField()),
                 ('like_cnt', models.IntegerField()),
                 ('img_url', models.CharField(max_length=200)),
-                ('brnd', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='hairprds', to='chaeum.Brnd')),
-                ('comp', models.ManyToManyField(to='chaeum.Comp')),
+                ('brnd', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='hairprds', to='app.Brnd')),
+                ('comp', models.ManyToManyField(to='app.Comp')),
             ],
             options={
                 'db_table': 'TBHAIRPRD',
@@ -135,7 +135,7 @@ class Migration(migrations.Migration):
                 ('img_url', models.CharField(max_length=200)),
                 ('reg_date', models.DateTimeField()),
                 ('mod_date', models.DateTimeField(auto_now_add=True)),
-                ('hairprd', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='hairprdrv_hairprd', to='chaeum.HairPrd')),
+                ('hairprd', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='hairprdrv_hairprd', to='app.HairPrd')),
                 ('usr', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='hairprdrv_usr', to=settings.AUTH_USER_MODEL)),
             ],
             options={
@@ -214,8 +214,8 @@ class Migration(migrations.Migration):
                 ('forbid', models.CharField(max_length=500)),
                 ('careful_med', models.CharField(max_length=500)),
                 ('side_effect', models.CharField(max_length=500)),
-                ('brnd', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='normmeds', to='chaeum.Brnd')),
-                ('comp', models.ManyToManyField(to='chaeum.Comp')),
+                ('brnd', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='normmeds', to='app.Brnd')),
+                ('comp', models.ManyToManyField(to='app.Comp')),
             ],
             options={
                 'db_table': 'TBNORMMED',
@@ -235,7 +235,7 @@ class Migration(migrations.Migration):
                 ('img_url', models.CharField(max_length=200)),
                 ('reg_date', models.DateTimeField()),
                 ('mod_date', models.DateTimeField(auto_now_add=True)),
-                ('normmed', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='normmedrv_normmed', to='chaeum.NormMed')),
+                ('normmed', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='normmedrv_normmed', to='app.NormMed')),
                 ('usr', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='normmedrv_usr', to=settings.AUTH_USER_MODEL)),
             ],
             options={
@@ -270,8 +270,8 @@ class Migration(migrations.Migration):
                 ('forbid', models.CharField(max_length=500)),
                 ('careful_med', models.CharField(max_length=500)),
                 ('side_effect', models.CharField(max_length=500)),
-                ('brnd', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='specmeds', to='chaeum.Brnd')),
-                ('comp', models.ManyToManyField(to='chaeum.Comp')),
+                ('brnd', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='specmeds', to='app.Brnd')),
+                ('comp', models.ManyToManyField(to='app.Comp')),
             ],
             options={
                 'db_table': 'TBSPECMED',
@@ -291,7 +291,7 @@ class Migration(migrations.Migration):
                 ('img_url', models.CharField(max_length=200)),
                 ('reg_date', models.DateTimeField()),
                 ('mod_date', models.DateTimeField(auto_now_add=True)),
-                ('specmed', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='specmedrv_specmed', to='chaeum.SpecMed')),
+                ('specmed', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='specmedrv_specmed', to='app.SpecMed')),
                 ('usr', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='specmedrv_usr', to=settings.AUTH_USER_MODEL)),
             ],
             options={
@@ -327,7 +327,7 @@ class Migration(migrations.Migration):
                 ('img_url', models.CharField(max_length=200)),
                 ('reg_date', models.DateTimeField()),
                 ('mod_date', models.DateTimeField(auto_now_add=True)),
-                ('surgery', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='surgeryrv_surgery', to='chaeum.Surgery')),
+                ('surgery', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='surgeryrv_surgery', to='app.Surgery')),
                 ('usr', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='surgeryrv_usr', to=settings.AUTH_USER_MODEL)),
             ],
             options={
@@ -355,7 +355,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='hairshopreview',
             name='hairshop',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='hairshoprv_hairshop', to='chaeum.SpecMed'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='hairshoprv_hairshop', to='app.SpecMed'),
         ),
         migrations.AddField(
             model_name='hairshopreview',
@@ -365,21 +365,21 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='hairprgset',
             name='hairshop',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='hairprgset_hairshop', to='chaeum.HairShop'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='hairprgset_hairshop', to='app.HairShop'),
         ),
         migrations.AddField(
             model_name='hairprg',
             name='hairprgset',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='hairprg_hairprgset', to='chaeum.HairShop'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='hairprg_hairprgset', to='app.HairShop'),
         ),
         migrations.AddField(
             model_name='clinicsurgery',
             name='surgery',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='chaeum.Surgery'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='app.Surgery'),
         ),
         migrations.AddField(
             model_name='clinic',
             name='surgeries',
-            field=models.ManyToManyField(through='chaeum.ClinicSurgery', to='chaeum.Surgery'),
+            field=models.ManyToManyField(through='app.ClinicSurgery', to='app.Surgery'),
         ),
     ]

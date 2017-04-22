@@ -2,8 +2,8 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.models import User
 
-#from chaeum.models2 import Profile
-from chaeum.models import Profile
+#from app.models2 import Profile
+from app.models import Profile
 
 # Register your models here.
 

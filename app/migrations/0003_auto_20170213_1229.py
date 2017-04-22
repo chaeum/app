@@ -8,7 +8,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('chaeum', '0002_test'),
+        ('app', '0002_test'),
     ]
 
     operations = [
